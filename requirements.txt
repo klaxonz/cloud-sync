@@ -1,1 +1,2 @@
 alipcs_py==0.6.2
+cython
