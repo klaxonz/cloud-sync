@@ -40,9 +40,9 @@ if __name__ == '__main__':
     config.read(args.file)
     remote_path = config.get('AliPCSDownload', 'remote_path')
     local_path = config.get('AliPCSDownload', 'local_path')
-    download_path = config.get('AliPCSDownload', 'download_path')
+    download_path = config.get('AliPCSDownload', 'download_path', fallback=None)
     refresh_token = config.get('AliPCSDownload', 'refresh_token')
-    encrypt_password = config.get('AliPCSDownload', 'encrypt_password')
+    encrypt_password = config.get('AliPCSDownload', 'encrypt_password', fallback=None)
     if encrypt_password is not None:
         encrypt_password = encrypt_password.encode("utf-8")
 
